@@ -2,7 +2,9 @@
 
 - karabiner_caps_lock_modifier.json
   - This config is for karabiner on macOS, which makes capslock as a modifier
-  - This shortcut also works with other modifiers like command/shift/options etc
+  - These shortcuts also work with other modifiers like command/shift/options/shift
+  - Input method switch function still works
+  - The original function of turning on capslock does not work
   - Mapping capslock + ikjl/wsad to arrow keys up/down/left/right
   - Mapping capslock + hn to backspace/delete keys
   - Mapping capslock + m,/zx to home/end keys
