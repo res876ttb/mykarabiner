@@ -1,5 +1,5 @@
 {
-  "title": "",
+  "title": "Raymond Hsu's macOS modifiers",
   "rules": [
     {
       "description": "Caps Lock Modifiers",
@@ -446,6 +446,49 @@
           "to": [
             {
               "key_code": "page_down"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "ctrl+shift modifier",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
           "type": "basic"
