@@ -464,6 +464,14 @@
               ]
             }
           },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
           "to_if_alone": [
             {
               "key_code": "spacebar",
@@ -483,6 +491,14 @@
               ]
             }
           },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "fn"
+              ]
+            }
+          ],
           "to_if_alone": [
             {
               "key_code": "spacebar",
