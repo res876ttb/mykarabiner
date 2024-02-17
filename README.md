@@ -1,4 +1,4 @@
-# Myconfig
+# mykarabiner
 
 - karabiner_caps_lock_modifier.json
   - Rule1: Caps Lock Modifiers
