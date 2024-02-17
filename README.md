@@ -1,14 +1,18 @@
 # Myconfig
 
 - karabiner_caps_lock_modifier.json
-  - This config is for karabiner on macOS, which makes capslock as a modifier
-  - These shortcuts also work with other modifiers like command/shift/options/shift
-  - Input method switch function still works
-  - The original function of turning on capslock does not work
-  - Mapping capslock + ikjl/wsad to arrow keys up/down/left/right
-  - Mapping capslock + hn to backspace/delete keys
-  - Mapping capslock + m,/zx to home/end keys
-  - Mapping capslock + uo/qe to page up/down keys
+  - Rule1: Caps Lock Modifiers
+    - This config is for karabiner on macOS, which makes capslock as a modifier
+    - These shortcuts also work with other modifiers like command/shift/options/shift
+    - Input method switch function will ***NOT*** work
+    - The original function of turning on capslock will ***NOT*** work
+    - Mapping `capslock + ikjl/wsad` to `arrow keys up/down/left/right`
+    - Mapping `capslock + hn` to `backspace/delete` keys
+    - Mapping `capslock + m,/zx` to `home/end` keys
+    - Mapping `capslock + uo/qe` to `page up/down` keys
+  - Rule2: ctrl+shift modifier
+    - Mapping `left_ctrl + shift` to `command + spacebar`
+    - Mapping `fn + shift` to `command + spacebar`
   - References
     - https://genesy.github.io/karabiner-complex-rules-generator/
       - Copy content in this json file to the website, and click install to install it
