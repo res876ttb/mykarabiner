@@ -469,7 +469,8 @@
               "key_code": "left_shift",
               "modifiers": [
                 "left_control"
-              ]
+              ],
+              "lazy": true
             }
           ],
           "to_if_alone": [
@@ -496,7 +497,8 @@
               "key_code": "left_shift",
               "modifiers": [
                 "fn"
-              ]
+              ],
+              "lazy": true
             }
           ],
           "to_if_alone": [
