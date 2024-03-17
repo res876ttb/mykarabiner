@@ -590,6 +590,12 @@
               ]
             }
           ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["^com\\.vmware\\.horizon$"]
+            }
+          ],
           "type": "basic"
         }
       ]
