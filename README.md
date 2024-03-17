@@ -16,6 +16,7 @@
     - Mapping `fn + shift` to `command + spacebar`
   - Rule 3: right shift modifier
     - Mapping `right_shift` to `command + space`
+    - This modifier is disabled in VMware Horizon Client, or the right shift will not work in VDI.
   - References
     - https://genesy.github.io/karabiner-complex-rules-generator/
       - Copy content in this json file to the website, and click install to install it
