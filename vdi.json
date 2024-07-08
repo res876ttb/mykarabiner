@@ -641,6 +641,14 @@
           "conditions": [
             {"name": "left_option vdi pressed","type": "variable_if","value": 1}
           ],
+          "from": {"key_code": "s","modifiers": {"mandatory": ["left_option", "left_shift"], "optional": ["any"]}},
+          "to": [{"key_code": "s", "modifiers": ["left_command", "left_shift"]}],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {"name": "left_option vdi pressed","type": "variable_if","value": 1}
+          ],
           "from": {"key_code": "s","modifiers": {"mandatory": ["left_option"], "optional": ["any"]}},
           "to": [{"key_code": "s", "modifiers": ["left_option"]}],
           "type": "basic"
