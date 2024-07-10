@@ -503,19 +503,10 @@
         },
         {
           "conditions": [
-            {"name": "left_command vdi pressed","type": "variable_if","value": 1},
             {"name": "left_option vdi pressed","type": "variable_if","value": 1}
           ],
           "from": {"key_code": "c","modifiers": {"mandatory": ["left_option"], "optional": ["any"]}},
           "to": [{"key_code": "insert", "modifiers": ["left_control"]}],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {"name": "left_option vdi pressed","type": "variable_if","value": 1}
-          ],
-          "from": {"key_code": "c","modifiers": {"mandatory": ["left_option"], "optional": ["any"]}},
-          "to": [{"key_code": "c", "modifiers": ["left_control"]}],
           "type": "basic"
         },
         {
@@ -584,19 +575,10 @@
         },
         {
           "conditions": [
-            {"name": "left_command vdi pressed","type": "variable_if","value": 1},
             {"name": "left_option vdi pressed","type": "variable_if","value": 1}
           ],
           "from": {"key_code": "v","modifiers": {"mandatory": ["left_option"], "optional": ["any"]}},
           "to": [{"key_code": "insert", "modifiers": ["left_shift"]}],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {"name": "left_option vdi pressed","type": "variable_if","value": 1}
-          ],
-          "from": {"key_code": "v","modifiers": {"mandatory": ["left_option"], "optional": ["any"]}},
-          "to": [{"key_code": "v", "modifiers": ["left_control"]}],
           "type": "basic"
         },
         {
