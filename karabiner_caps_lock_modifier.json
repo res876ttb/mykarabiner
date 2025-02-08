@@ -484,7 +484,7 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["^com\\.vmware\\.horizon$"]
+              "bundle_identifiers": ["^com\\.vmware\\.horizon$", "^com\\.microsoft\\.rdc\\.macos$", "^tv\\.parsec\\.www$"]
             }
           ],
           "type": "basic"
@@ -518,7 +518,7 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["^com\\.vmware\\.horizon$"]
+              "bundle_identifiers": ["^com\\.vmware\\.horizon$", "^com\\.microsoft\\.rdc\\.macos$", "^tv\\.parsec\\.www$"]
             }
           ],
           "type": "basic"
@@ -552,7 +552,7 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["^com\\.vmware\\.horizon$"]
+              "bundle_identifiers": ["^com\\.vmware\\.horizon$", "^com\\.microsoft\\.rdc\\.macos$", "^tv\\.parsec\\.www$"]
             }
           ],
           "type": "basic"
@@ -586,7 +586,7 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["^com\\.vmware\\.horizon$"]
+              "bundle_identifiers": ["^com\\.vmware\\.horizon$", "^com\\.microsoft\\.rdc\\.macos$", "^tv\\.parsec\\.www$"]
             }
           ],
           "type": "basic"
@@ -617,7 +617,7 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["^com\\.vmware\\.horizon$"]
+              "bundle_identifiers": ["^com\\.vmware\\.horizon$", "^com\\.microsoft\\.rdc\\.macos$", "^tv\\.parsec\\.www$"]
             }
           ],
           "type": "basic"
