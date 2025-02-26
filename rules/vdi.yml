@@ -1,0 +1,22 @@
+title: Swap cmd/option
+macros:
+  condition_cmd_space_if_alone:
+    to_if_alone:
+      - key_code: left_control
+        modifiers:
+          - left_shift
+  condition_rdp_only:
+    conditions:
+      - type: frontmost_application_if
+        bundle_identifiers:
+          - ^com\.vmware\.horizon$
+          - ^com\.omnissa\.horizon\.client\.mac$
+          - ^com\.microsoft\.rdc\.macos$
+          - ^tv\.parsec\.www$
+rules:
+  Swap cmd/option in VDI/RDP:
+    # Format: from keycode,modifier1,modifier2,... / to keycode,modifier1,modifier2,... | keycode,modifier1,modifier2,... / macro1,macro2,...
+    - left_option,any   / left_command        / condition_rdp_only
+    - left_command,any  / left_option         / condition_rdp_only
+    - left_shift,fn     / left_shift,fn,lazy  / condition_rdp_only,condition_cmd_space_if_alone
+    - fn,left_shift     / fn,left_shift,lazy  / condition_rdp_only,condition_cmd_space_if_alone

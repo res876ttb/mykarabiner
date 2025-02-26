@@ -1,0 +1,123 @@
+title: Advanced RDP shortcuts
+macros:
+  condition_caps:
+    conditions:
+      - name: caps_lock pressed
+        type: variable_if
+        value: 1
+  condition_rdp_only:
+    conditions:
+      - type: frontmost_application_if
+        bundle_identifiers:
+          - ^com\.vmware\.horizon$
+          - ^com\.omnissa\.horizon\.client\.mac$
+          - ^com\.microsoft\.rdc\.macos$
+          - ^tv\.parsec\.www$
+  condition_caps_rdp_only:
+    conditions:
+      - type: frontmost_application_if
+        bundle_identifiers:
+          - ^com\.vmware\.horizon$
+          - ^com\.omnissa\.horizon\.client\.mac$
+          - ^com\.microsoft\.rdc\.macos$
+          - ^tv\.parsec\.www$
+      - name: caps_lock pressed
+        type: variable_if
+        value: 1
+  condition_f2_in_rdp:
+    from:
+      apple_vendor_top_case_key_code: brightness_up
+  condition_fn_f2_in_rdp:
+    from:
+      consumer_key_code: display_brightness_increment
+      modifiers:
+        mandatory:
+          - fn
+rules:
+  Advanced RDP shortcuts:
+    # Format: from keycode,modifier1,modifier2,... / to keycode,modifier1,modifier2,... | keycode,modifier1,modifier2,... / macro1,macro2,...
+
+    # Lazy alt/win key in RDP, also swap left alt/win
+    - left_control,left_shift   / left_control,left_shift       / condition_rdp_only
+    - left_shift,left_control   / left_shift,left_control       / condition_rdp_only
+    - left_command,any          / left_option,lazy              / condition_rdp_only
+    - left_option,any           / left_command,lazy             / condition_rdp_only
+    - left_shift,any            / left_shift,lazy               / condition_rdp_only
+
+    # Page navigation
+    - left_arrow,option,command         / page_up,left_control              / condition_rdp_only
+    - up_arrow,option,command           / page_up,left_control              / condition_rdp_only
+    - right_arrow,option,command        / page_down,left_control            / condition_rdp_only
+    - down_arrow,option,command         / page_down,left_control            / condition_rdp_only
+
+    # Remap arrow keys
+    - left_arrow,left_command,any   / left_arrow,left_control   / condition_rdp_only
+    - left_arrow,left_option,any    / home                      / condition_rdp_only
+    - up_arrow,left_command,any     / up_arrow,left_option      / condition_rdp_only
+    - up_arrow,left_option,any      / home,left_control         / condition_rdp_only
+    - down_arrow,left_command,any   / down_arrow,left_option    / condition_rdp_only
+    - down_arrow,left_option,any    / end,left_control          / condition_rdp_only
+    - right_arrow,left_command,any  / right_arrow,left_control  / condition_rdp_only
+    - right_arrow,left_option,any   / end                       / condition_rdp_only
+
+    # Remap caps lock keys
+    - j,left_command,any    / left_arrow,left_control   / condition_caps_rdp_only
+    - j,left_option,any     / home                      / condition_caps_rdp_only
+    - i,left_command,any    / up_arrow,left_option      / condition_caps_rdp_only
+    - i,left_option,any     / home,left_control         / condition_caps_rdp_only
+    - k,left_command,any    / down_arrow,left_option    / condition_caps_rdp_only
+    - k,left_option,any     / end,left_control          / condition_caps_rdp_only
+    - l,left_command,any    / right_arrow,left_control  / condition_caps_rdp_only
+    - l,left_option,any     / end                       / condition_caps_rdp_only
+    - a,left_command,any    / left_arrow,left_control   / condition_caps_rdp_only
+    - a,left_option,any     / home                      / condition_caps_rdp_only
+    - w,left_command,any    / up_arrow,left_option      / condition_caps_rdp_only
+    - w,left_option,any     / home,left_control         / condition_caps_rdp_only
+    - s,left_command,any    / down_arrow,left_option    / condition_caps_rdp_only
+    - s,left_option,any     / end,left_control          / condition_caps_rdp_only
+    - d,left_command,any    / right_arrow,left_control  / condition_caps_rdp_only
+    - d,left_option,any     / end                       / condition_caps_rdp_only
+
+    # Remap backspace/delete
+    - h,left_command                      / delete_or_backspace,left_control      / condition_caps_rdp_only
+    - h,left_option                       / home,left_shift | delete_or_backspace / condition_caps_rdp_only
+    - n,left_command                      / delete_forward,left_control           / condition_caps_rdp_only
+    - n,left_option                       / end,left_shift | delete_or_backspace  / condition_caps_rdp_only
+    - delete_or_backspace,left_command    / delete_or_backspace,left_control      / condition_rdp_only
+    - delete_or_backspace,left_option     / home,left_shift | delete_or_backspace / condition_rdp_only
+    - delete_or_backspace,left_command,fn / delete_forward,left_control           / condition_rdp_only
+    - delete_or_backspace,left_option,fn  / end,left_shift | delete_or_backspace  / condition_rdp_only
+    - delete_forward,left_command         / delete_forward,left_control           / condition_rdp_only
+    - delete_forward,left_option          / end,left_shift | delete_or_backspace  / condition_rdp_only
+
+    # Remap frequently used function
+    - a,left_option                     / a,left_control                    / condition_rdp_only
+    - b,left_option                     / b,left_control                    / condition_rdp_only
+    - c,left_option                     / insert,left_control               / condition_rdp_only
+    - f,left_option                     / f,left_control                    / condition_rdp_only
+    - g,left_option                     / g,left_control                    / condition_rdp_only
+    - i,left_option                     / i,left_control                    / condition_rdp_only
+    - n,left_option                     / n,left_control                    / condition_rdp_only
+    - o,left_option,any                 / o,left_control                    / condition_rdp_only
+    - p,left_option,any                 / p,left_control                    / condition_rdp_only
+    - r,left_option,any                 / r,left_control                    / condition_rdp_only
+    - s,left_option,any                 / s,left_control                    / condition_rdp_only
+    - t,left_option,any                 / t,left_control                    / condition_rdp_only
+    - u,left_option                     / u,left_control                    / condition_rdp_only
+    - v,left_option                     / insert,left_shift                 / condition_rdp_only
+    - w,left_option                     / w,left_control                    / condition_rdp_only
+    - x,left_option                     / x,left_control                    / condition_rdp_only
+    - y,left_option                     / y,left_control                    / condition_rdp_only
+    - z,left_option,any                 / z,left_control                    / condition_rdp_only
+    - comma,left_option                 / comma,left_control                / condition_rdp_only
+    - slash,left_option                 / slash,left_control                / condition_rdp_only
+    - backslash,left_option,left_shift  / backslash,left_control,left_shift / condition_rdp_only
+
+    # Used in terminal
+    - a,left_command          / a,left_option                     / condition_rdp_only
+    - s,left_command          / s,left_option                     / condition_rdp_only
+    - t,left_command          / t,left_option                     / condition_rdp_only
+    - w,left_command          / w,left_option                     / condition_rdp_only
+    - z,left_command          / b,left_control | open_bracket     / condition_rdp_only
+    - hyphen,left_command     / b,left_control | quote,left_shift / condition_rdp_only
+    - backslash,left_command  / b,left_control | 5,left_shift     / condition_rdp_only

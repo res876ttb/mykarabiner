@@ -1,0 +1,71 @@
+title: res876ttb's macOS modifiers
+macros:
+  condition_caps:
+    conditions:
+      - name: caps_lock pressed
+        type: variable_if
+        value: 1
+  condition_caps_key_up:
+    to_after_key_up:
+      - set_variable:
+          name: caps_lock pressed
+          value: 0
+  condition_caps_if_alone:
+    to_if_alone:
+      - key_code: fn
+  condition_caps_to:
+    to:
+      - set_variable:
+          name: caps_lock pressed
+          value: 1
+  condition_cmd_space_if_alone:
+    to_if_alone:
+      - key_code: spacebar
+        modifiers:
+          - left_command
+  condition_not_rdp:
+    conditions:
+      - type: frontmost_application_unless
+        bundle_identifiers:
+          - ^com\.vmware\.horizon$
+          - ^com\.omnissa\.horizon\.client\.mac$
+          - ^com\.microsoft\.rdc\.macos$
+          - ^tv\.parsec\.www$
+rules:
+  Caps Lock Modifiers:
+    # Format: from keycode,modifier1,modifier2,... / to keycode,modifier1,modifier2,... | keycode,modifier1,modifier2,... / macro1,macro2,...
+
+    # Caps Lock remapping
+    - caps_lock,any /                     / condition_caps_key_up,condition_caps_if_alone,condition_caps_to
+    - j,any         / left_arrow          / condition_caps
+    - k,any         / down_arrow          / condition_caps
+    - i,any         / up_arrow            / condition_caps
+    - l,any         / right_arrow         / condition_caps
+    - h,any         / delete_or_backspace / condition_caps
+    - n,any         / delete_forward      / condition_caps
+    - m,any         / home                / condition_caps
+    - comma,any     / end                 / condition_caps
+    - a,any         / left_arrow          / condition_caps
+    - s,any         / down_arrow          / condition_caps
+    - w,any         / up_arrow            / condition_caps
+    - d,any         / right_arrow         / condition_caps
+    - z,any         / home                / condition_caps
+    - x,any         / end                 / condition_caps
+    - q,any         / page_up             / condition_caps
+    - u,any         / page_up             / condition_caps
+    - o,any         / page_down           / condition_caps
+    - e,any         / page_down           / condition_caps
+
+  ctrl+shift modifier:
+    - left_shift,left_control   / left_shift,left_control,lazy / condition_not_rdp,condition_cmd_space_if_alone
+    - left_shift,fn             / left_shift,fn,lazy           / condition_not_rdp,condition_cmd_space_if_alone
+    - left_control,left_shift   / left_shift,left_control,lazy / condition_not_rdp,condition_cmd_space_if_alone
+    - fn,left_shift             / left_shift,fn,lazy           / condition_not_rdp,condition_cmd_space_if_alone
+
+  right shift modifier:
+    - right_shift / right_shift,lazy  / condition_not_rdp,condition_cmd_space_if_alone
+
+  fn remapping:
+    # Note that need to use fn keys as standard keys
+    - f1,any / display_brightness_decrement  / condition_caps
+    - f2,any / display_brightness_increment  / condition_caps
