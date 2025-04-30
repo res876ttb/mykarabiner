@@ -93,7 +93,7 @@ rules:
     # Remap frequently used function
     - a,left_option                     / a,left_control                    / condition_rdp_only
     - b,left_option                     / b,left_control                    / condition_rdp_only
-    - c,left_option                     / insert,left_control               / condition_rdp_only
+    - c,left_option                     / c,right_control                   / condition_rdp_only
     - f,left_option                     / f,left_control                    / condition_rdp_only
     - g,left_option                     / g,left_control                    / condition_rdp_only
     - i,left_option                     / i,left_control                    / condition_rdp_only
@@ -104,7 +104,7 @@ rules:
     - s,left_option,any                 / s,left_control                    / condition_rdp_only
     - t,left_option,any                 / t,left_control                    / condition_rdp_only
     - u,left_option                     / u,left_control                    / condition_rdp_only
-    - v,left_option                     / insert,left_shift                 / condition_rdp_only
+    - v,left_option                     / v,right_control                   / condition_rdp_only
     - w,left_option                     / w,left_control                    / condition_rdp_only
     - x,left_option                     / x,left_control                    / condition_rdp_only
     - y,left_option                     / y,left_control                    / condition_rdp_only
@@ -112,6 +112,7 @@ rules:
     - comma,left_option                 / comma,left_control                / condition_rdp_only
     - slash,left_option                 / slash,left_control                / condition_rdp_only
     - backslash,left_option,left_shift  / backslash,left_control,left_shift / condition_rdp_only
+    - v,left_option,left_command,shift  / v,left_control,left_shift         / condition_rdp_only
 
     # Used in terminal
     - a,left_command          / a,left_option                     / condition_rdp_only
