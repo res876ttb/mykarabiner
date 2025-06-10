@@ -23,6 +23,9 @@ macros:
       - key_code: spacebar
         modifiers:
           - left_command
+  condition_to_caps_if_alone:
+    to_if_alone:
+      - key_code: caps_lock
   condition_not_rdp:
     conditions:
       - type: frontmost_application_unless
@@ -63,7 +66,7 @@ rules:
     - fn,left_shift             / left_shift,fn,lazy           / condition_not_rdp,condition_cmd_space_if_alone
 
   right shift modifier:
-    - right_shift / right_shift,lazy  / condition_not_rdp,condition_cmd_space_if_alone
+    - right_shift / right_shift,lazy  / condition_not_rdp,condition_to_caps_if_alone
 
   fn remapping:
     # Note that need to use fn keys as standard keys
