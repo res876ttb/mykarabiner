@@ -26,6 +26,7 @@ macros:
   condition_to_caps_if_alone:
     to_if_alone:
       - key_code: caps_lock
+        hold_down_milliseconds: 100
   condition_not_rdp:
     conditions:
       - type: frontmost_application_unless
