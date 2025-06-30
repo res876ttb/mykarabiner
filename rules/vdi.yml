@@ -13,6 +13,7 @@ macros:
           - ^com\.omnissa\.horizon\.client\.mac$
           - ^com\.microsoft\.rdc\.macos$
           - ^tv\.parsec\.www$
+          - ^com\.realvnc\.vncviewer$
 rules:
   Swap cmd/option in VDI/RDP:
     # Format: from keycode,modifier1,modifier2,... / to keycode,modifier1,modifier2,... | keycode,modifier1,modifier2,... / macro1,macro2,...

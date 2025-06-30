@@ -13,6 +13,7 @@ macros:
           - ^com\.omnissa\.horizon\.client\.mac$
           - ^com\.microsoft\.rdc\.macos$
           - ^tv\.parsec\.www$
+          - ^com\.realvnc\.vncviewer$
   condition_caps_rdp_only:
     conditions:
       - type: frontmost_application_if
@@ -21,6 +22,7 @@ macros:
           - ^com\.omnissa\.horizon\.client\.mac$
           - ^com\.microsoft\.rdc\.macos$
           - ^tv\.parsec\.www$
+          - ^com\.realvnc\.vncviewer$
       - name: caps_lock pressed
         type: variable_if
         value: 1
