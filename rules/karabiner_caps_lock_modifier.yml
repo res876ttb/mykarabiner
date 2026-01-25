@@ -36,6 +36,7 @@ macros:
           - ^com\.microsoft\.rdc\.macos$
           - ^tv\.parsec\.www$
           - ^com\.realvnc\.vncviewer$
+          - ^com\.nicesoftware\.dcvviewer$
 rules:
   Caps Lock Modifiers:
     # Format: from keycode,modifier1,modifier2,... / to keycode,modifier1,modifier2,... | keycode,modifier1,modifier2,... / macro1,macro2,...
@@ -68,7 +69,7 @@ rules:
     - fn,left_shift             / left_shift,fn,lazy           / condition_not_rdp,condition_cmd_space_if_alone
 
   right shift modifier:
-    - right_shift / right_shift,lazy  / condition_not_rdp,condition_cmd_space_if_alone
+    - right_shift / right_shift,lazy  / condition_not_rdp,condition_to_caps_if_alone
 
   fn remapping:
     # Note that need to use fn keys as standard keys

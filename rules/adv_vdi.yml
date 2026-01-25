@@ -14,6 +14,7 @@ macros:
           - ^com\.microsoft\.rdc\.macos$
           - ^tv\.parsec\.www$
           - ^com\.realvnc\.vncviewer$
+          - ^com\.nicesoftware\.dcvviewer$
   condition_caps_rdp_only:
     conditions:
       - type: frontmost_application_if
@@ -23,6 +24,7 @@ macros:
           - ^com\.microsoft\.rdc\.macos$
           - ^tv\.parsec\.www$
           - ^com\.realvnc\.vncviewer$
+          - ^com\.nicesoftware\.dcvviewer$
       - name: caps_lock pressed
         type: variable_if
         value: 1
