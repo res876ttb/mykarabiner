@@ -37,6 +37,7 @@ macros:
           - ^tv\.parsec\.www$
           - ^com\.realvnc\.vncviewer$
           - ^com\.nicesoftware\.dcvviewer$
+          - ^org\.xpra\.xpra$
 rules:
   Caps Lock Modifiers:
     # Format: from keycode,modifier1,modifier2,... / to keycode,modifier1,modifier2,... | keycode,modifier1,modifier2,... / macro1,macro2,...
