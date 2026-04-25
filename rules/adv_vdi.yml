@@ -5,6 +5,11 @@ macros:
       - name: caps_lock pressed
         type: variable_if
         value: 1
+  condition_xpra_only:
+    conditions:
+      - type: frontmost_application_if
+        bundle_identifiers:
+          - ^org\.xpra\.xpra$
   condition_rdp_only:
     conditions:
       - type: frontmost_application_if
@@ -128,3 +133,6 @@ rules:
     - z,left_command          / b,left_control | open_bracket     / condition_rdp_only
     - hyphen,left_command     / b,left_control | quote,left_shift / condition_rdp_only
     - backslash,left_command  / b,left_control | 5,left_shift     / condition_rdp_only
+
+    # Switch app
+    - tab,left_option,any     / tab,left_command                  / condition_xpra_only
