@@ -21,6 +21,8 @@ macros:
           - ^com\.realvnc\.vncviewer$
           - ^com\.nicesoftware\.dcvviewer$
           - ^org\.xpra\.xpra$
+        file_paths:
+          - .*Chrome\ Remote\ Desktop\.app.*
   condition_caps_rdp_only:
     conditions:
       - type: frontmost_application_if
