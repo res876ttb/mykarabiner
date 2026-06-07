@@ -34,6 +34,8 @@ macros:
           - ^com\.realvnc\.vncviewer$
           - ^com\.nicesoftware\.dcvviewer$
           - ^org\.xpra\.xpra$
+        file_paths:
+          - .*Chrome\ Remote\ Desktop\.app.*
       - name: caps_lock pressed
         type: variable_if
         value: 1

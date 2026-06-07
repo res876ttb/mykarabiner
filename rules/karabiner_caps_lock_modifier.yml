@@ -38,6 +38,8 @@ macros:
           - ^com\.realvnc\.vncviewer$
           - ^com\.nicesoftware\.dcvviewer$
           - ^org\.xpra\.xpra$
+        file_paths:
+          - .*Chrome\ Remote\ Desktop\.app.*
 rules:
   Caps Lock Modifiers:
     # Format: from keycode,modifier1,modifier2,... / to keycode,modifier1,modifier2,... | keycode,modifier1,modifier2,... / macro1,macro2,...
